@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="assets/css/slick-theme.css">
     <link rel="stylesheet" href="assets/css/lity.min.css">
 
-
     <link rel="stylesheet" href="assets/css/estilo.css">
 
 
