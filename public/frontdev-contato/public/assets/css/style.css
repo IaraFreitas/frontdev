@@ -1,0 +1,1078 @@
+/* descrição cores da paleta:
+#000000 (preto) - #262621 (preto + clarinho) - #ffffff (branco) - #dec57a (dourado + claro) - #aa8327 (dourado + escuro)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+h1{
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+h2, h3, h4, h5, h6{
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body{
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+}
+
+img{
+    width: 100%;
+}
+
+h3{
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*inicio logo menu-------------------------------*/
+header{
+    background: black;
+}
+
+.site{  /*define os 1200px centro da página*/
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header > div{
+    background: rgba(0, 0, 0, 0.678);
+    display: flex;
+    align-items: center;
+}
+
+header div div h1{
+    width: 13,75em; /*220px / 16px = 13,75em*/
+    height: 80px;
+    margin: 20px;
+    font-weight: 900;
+    font-size: 100px;
+    color: #f2b705;
+}
+
+header div div h1:hover {
+    transform: scale(0.9);
+    transition: 500ms linear;
+}
+
+header > div div:nth-child(2) {
+    flex-grow: 2;
+}
+
+header div div a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+header div div a:hover{
+    color: #f2b705;
+}
+/*fim logo menu----------------------------------------------------*/
+
+
+/*inicio menu nav-------------------------*/
+.menu ul { 
+    display: flex;
+    justify-content: space-around;   
+    align-items: baseline;
+} 
+
+.menu ul li a{
+    font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/*PARA O MENU FICAR FIXO NO TOPO*/
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    margin: 0 auto;
+}
+/*fim menu nav-----------------------------------------------------*/
+
+
+/*inicio menu btn-login--------------------*/
+.btn-login a {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background: #f2b705;
+  width: 150px;
+  border-radius: 20px;
+  color: black;
+  padding: 5px;
+}
+
+.btn-login a:hover{
+    background: black;
+    color: #f2b705;
+    border: solid #f2b705;
+}
+/*fim menu btn-login-----------------------------------------------*/
+
+
+/*inicio img banner-----------------------*/
+.banner{
+    /* background-image: url(../img/banner-FD-1920x380.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    position:relative;
+    text-align:center;
+}
+
+.banner a .imgBanner{
+    height: 380px;
+}
+
+.banner .btn-play{
+    position:absolute;
+    z-index:1;
+    top:50%;
+    left:50%;
+    width:60px;               /* largura para o botão */
+    height:60px;              /* altura para o botão */
+    border-radius: 50%;
+    padding:0;
+    /*margin:-15px 0 0 -30px;*/   /* margem à esquerda e ao topo metade da medida do botão */
+    border:0 none;
+    cursor: pointer;
+    background: white;
+}
+/*fim img banner --------------------------------------------------*/
+
+
+/*inicio sobre-e-orcamento---------------*/
+.sobre-e-orcamento{
+    height: 600px;
+    background: black;
+    margin-top: -2px;
+}
+
+.sobre-e-orcamento div{
+    display: flex;
+    background: black;
+}
+
+.sobre-e-orcamento .sobre{
+    display: block;
+    height: 500px;
+    width: 500px;
+    color: white;
+    margin: 50px auto;
+}
+
+.sobre-e-orcamento .sobre p{
+    font-size: 36px;
+    text-align: center;
+    padding: 30px;
+}
+
+.sobre-e-orcamento .orcamento{
+    display: block;
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+}
+
+/* .sobre-e-orcamento .orcamento h3:hover{
+    transform: scale(1.1);
+    transition: 500ms linear;
+    animation-duration: calc(var(--animate-delay)*1);
+    transition-duration: 2ms;
+} */
+
+.sobre-e-orcamento .orcamento p{
+    color: white;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+    font-size: 50px;
+    animation: moveToRight 2s ease-in-out;
+    animation-delay: 1000ms;
+    margin-left: 10px;
+}
+
+/*efeito de movimento nos três pontinhos inseridos acima do fomulário FAÇA SEU ORÇAMENTO*/
+@keyframes moveToRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(400px);
+      color: #f2b705; 
+    }
+  }
+
+
+.sobre-e-orcamento input{
+    height: 50px;
+    width: 480px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    background: black;
+    border-color: #f2b705;
+    color: white;
+}
+
+.sobre-e-orcamento .orcamento textarea{
+    height: 50px;
+    width: 480px;
+    margin-left: 10px;
+    background: black;
+    border-color: #f2b705;
+    color: white;
+}
+
+.sobre-e-orcamento .orcamento ::placeholder{
+    font-size: 30px;
+    font-weight: 600;
+    background: black;
+    color: white;
+}
+
+.sobre-e-orcamento .orcamento .btn-orcamento{
+    width: 300px;
+    height: 55px;
+    color: black;
+    background: #f2b705;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: solid black;
+    margin-top: 15px;
+    margin-left: 240px;
+}
+
+.sobre-e-orcamento .orcamento .btn-orcamento:hover{
+    background: black;
+    color: #f2b705;
+    border: solid #f2b705;
+}
+/*fim sobre-e-orcamento------------------------------------------------------*/
+
+/*inicio metodologia---------------------------*/
+.metodologia{
+    height: 480px; /*no layout dizia 690px*/
+    margin: 50px auto;
+}
+
+.metodologia h3{
+    color: black;
+    font-weight: 600;
+}
+
+.metodologia div div{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.metodologia .estrutura{
+    display: block;
+}
+
+.metodologia .num {
+    width: 20px;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    background: #f2b705;
+    margin-top: 30px;
+}
+
+.metodologia h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.metodologia p{
+    font-size: 19px;
+}
+
+.metodologia .btn-orcamento{
+    width: 360px;
+    height: 60px;
+    background: #f2b705;
+    font-size: 34px;
+    font-weight: 600;
+    border-radius: 25px;
+    margin-left: 410px;
+}
+
+.metodologia .btn-orcamento:hover{
+    color: #f2b705;
+    background:black;
+}
+/*fim metodologia-----------------------------------------------------------------------*/
+
+
+/*inicio linguagens-------------------------------*/
+.linguagens{
+    height: 650px;
+    background: orange;
+    padding: 50px;
+}
+
+.linguagens div h3{
+    color: black;
+}
+
+.linguagens div h4{
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.linguagens div div{
+    display: flex;
+    padding: 50px;
+}
+
+.linguagens div div div{
+    display: block;
+    width: 300px;
+    height: 350px;
+}
+
+.linguagens div div > div{
+    background: black;
+    margin: 10px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.linguagens div > div div img{
+    width: 101px;
+    height: 115px;
+    /* margin-left: 80px; */
+}
+
+.linguagens .nome{
+    font-size: 34px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.linguagens div div div a p{
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+}
+/*fim linguagens---------------------------------------------------------------------*/
+
+
+/*inicio desenvolvedores----------------------*/
+.desenvolvedores{
+    height: 650px;
+    background: black;
+    padding: 50px;
+}
+
+.desenvolvedores > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.desenvolvedores div .dev-banner{  /*DIV 1*/
+    display: block;
+    background: #f2b705;
+    width: 425,14px;
+    height: 619,99px;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.desenvolvedores div .dev-banner img {  
+    display: block;
+    width: 310px;
+    height: 100px;
+    border-radius: 20px;
+    border: solid black;
+    margin-bottom: 10px;
+}
+
+.desenvolvedores div .dev-banner img:hover{  
+    border: solid white;
+}
+
+.desenvolvedores div .dev-destaque{  /*DIV 2*/
+    display: block;
+    width: 336,84px;
+    height: 450px;
+    background: #f2b705;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.desenvolvedores div > .dev-destaque div img {
+    width: 240px;
+    height: 240px;
+    border: solid white;
+    border-radius: 260px;
+}
+
+.desenvolvedores div > .dev-destaque div:nth-child(2) {
+    display: block;
+}
+
+.desenvolvedores div > .dev-destaque h2{
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.desenvolvedores div > .dev-destaque h3{
+    font-size: 23px;
+    margin-top: 25px;
+}
+
+.desenvolvedores div .dev-destaque div:nth-child(3) img{
+    width: 48px;
+    height: 48px;
+    margin-left: 90px;
+}
+
+.desenvolvedores div .dev-destaque div:nth-child(3) img:hover{
+    width: 48px;
+    height: 48px;
+    margin-left: 90px;
+    background:black;
+}
+/*fim desenvolvedores-------------------------------------------------------------*/
+
+
+
+/*inicio footer----------------------------*/
+footer{
+    background: orange;
+}
+
+footer div{
+    display: flex;
+}
+
+footer div div{
+    display: block;
+    margin: 50px;
+    background: black;  
+    height: 400px;
+    width: 300px;
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+footer div div h3{
+    font-size: 25px;
+    color: #f2b705;
+    margin-top: 20px;
+}
+
+footer div div ul li{
+    margin-bottom: 50px;
+}
+
+footer div div ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+footer div div ul li a:hover{
+    text-decoration: none;
+    color: orange;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+footer div div:nth-child(2) iframe{
+    width: 260px;
+    height: 200px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+
+footer div div h2{ /*div do mapa*/
+    font-size: 22px;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer div div:nth-child(3) img{
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+footer div div:nth-child(3) a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 60px;
+    margin-bottom: 50px;
+}
+
+footer div div:nth-child(3) a:hover{
+    color: orange;
+}
+
+footer div div:nth-child(3) a:hover img{
+    transform: rotate(10deg);
+    transform: scale(1.1);
+}
+
+.desenvolvido {
+    background: black;
+    height: 30px;
+    color: #f2b705;
+    font-size: 25px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.desenvolvido a{
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    margin-left: 10px;
+}
+
+.desenvolvido a:hover{
+    transform: rotate(10deg);
+    transform: scale(1.1);
+}
+
+/*fim footer----------------------------------------------------------------------*/
+
+
+/*desenvolvido-------------------------------*/
+
+/*fim do desenvolvido-------------------------------------------------------------*/
+
+
+/*inicio @media 769 até -----------------------900px*/
+@media (max-width: 900px) {
+
+    /* .site {
+        max-width: fit-content;
+        gap: 40px;
+    } Obs. BAGUNÇOU TUDO QUANDO INSERI ESTE - REAVALIAR*/
+
+    .sobre-e-orcamento .orcamento {
+        width: 473px;
+        margin-right: 20px;
+    }
+
+    h3 {
+        font-size: 45px;
+
+    }
+
+    .sobre-e-orcamento .sobre p {
+        font-size: 27px;
+    }
+
+    .sobre-e-orcamento .orcamento p {
+        margin-left: 20px;
+    }
+
+    .sobre-e-orcamento input {
+        margin-left: 19px;
+        font-size: xx-large;
+    }
+
+    .sobre-e-orcamento .orcamento textarea {
+        margin-left: 19px;
+    }
+
+    .sobre-e-orcamento .orcamento .btn-orcamento {
+        font-size: 21px;
+    }
+
+    .metodologia .num {
+        border-radius: 20px;
+        font-size: 20px;
+    }
+
+    .metodologia h2 {
+        font-size: 23px;
+    }
+
+    .metodologia p {
+        font-size: 17px;
+    }
+
+    .metodologia .btn-orcamento {
+        width: 345px;
+        height: 55px;
+        font-size: 30px;
+        margin-left: 284px;
+    }
+
+    .metodologia div div {
+        padding: 10px;
+    }
+
+    .linguagens div div {
+        padding: 10px;
+    }
+
+    .linguagens {
+        height: 510px;
+        padding: 50px;
+    }
+
+  
+    .linguagens div div div a p {
+        font-size: 17px;
+    }
+
+    footer div div {
+        margin: 10px;
+        padding: 15px;
+        margin-bottom: 50px;
+    }
+
+    footer div div ul li a {
+        font-size: 21px;
+    }
+
+    footer div div h3 {
+        font-size: 22px;
+    }
+
+    footer div div h2 {
+        font-size: 21px;
+    }
+
+    footer div div:nth-child(3) a {
+        margin-left: 50px;
+    }
+
+
+} 
+/*fim @media 769 até --------------------------------------------------900px*/
+
+
+/*configuração especial para mostrar ou não o menu*/
+@media not all and (max-width:768px) {
+    .abrir-menu,
+    .fechar-menu {
+        display: none;
+    }
+}
+/*fim da configuração especial do menu*/
+
+
+/*inicio @media 361 até -----------------------768px*/
+@media (max-width: 768px) {
+    /* .linguagens div > div div img {
+        margin-left: 36px;
+    } */
+
+    .linguagens .nome {
+        font-size: 25px;
+    }
+
+    .linguagens div div div a p {
+        font-size: 16px;
+    }
+
+    footer div div h3 {
+        font-size: 19px;
+    }
+
+    footer div div ul li a {
+        font-size: 19px;
+    }
+
+
+}
+/*fim @media 361 até --------------------------------------------------768px*/
+
+
+/*inicio @media 0 até -----------------------360px*/
+@media (max-width: 360px) {
+
+    header div div:nth-child(2) .menu{
+        display: none;
+    }
+
+    header div .btn-login{
+        display: none;
+    }
+
+    .abrir-menu{
+        background: url(../img/menu-bar.png);
+        background-size: cover;
+        padding: 20px;
+        border: 0;
+        display: block;
+        cursor: pointer;
+        /* margin-right: 40px; */
+        margin-left: 150px;
+    }
+
+    .fechar-menu{
+        background: url(../img/menu-fechar.png);
+        background-size: cover;
+        padding: 20px;
+        border: 0;
+        display: block;
+        cursor: pointer;
+        margin: 15px;
+    }
+
+  
+    h3 { /*reflete no título do SOBRE e do ORÇAMENTO*/
+        font-size: 30px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .sobre-e-orcamento .sobre {
+        height: 250px;
+        margin: 0;
+        width: 100%;
+        background-color: #F2B705;
+    }
+
+    .sobre-e-orcamento .orcamento{
+        width: 360px;
+        margin-top: 0px;
+    }
+
+    .sobre-e-orcamento .sobre form{
+        width: 100%;
+    }
+
+    .sobre-e-orcamento .sobre p {
+        font-size: 25px;
+        margin-top: -50px;
+        padding: 20px;
+    }
+
+  
+
+    .sobre-e-orcamento input {
+        width: 320px;
+    }
+
+    .sobre-e-orcamento .orcamento textarea {
+        width: 320px;
+    }
+
+    .sobre-e-orcamento .orcamento .btn-orcamento {
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+
+    .sobre-e-orcamento div {
+        DISPLAY: block;
+    }
+
+    .sobre-e-orcamento input {
+        font-size: small;
+    }
+
+    .metodologia {
+        height: 770px;
+        margin-top: 200px;
+    }
+
+    .metodologia div div {
+        DISPLAY: BLOCK;
+        margin-top: -50px;
+    }
+
+    .metodologia .estrutura {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .metodologia .btn-orcamento {
+        margin-left: 7px;
+    }
+
+
+    .linguagens {
+        height: 1300px;
+        margin-top: 50px;
+        padding: 30px;
+    }
+
+    .linguagens div div {
+        DISPLAY: BLOCK;
+    }
+
+    .linguagens div div div {
+        width: 250px;
+        height: 335px;
+    }
+
+    .desenvolvedores > div{
+        padding: 0px;
+    }
+
+    .desenvolvedores div .dev-destaque {
+        DISPLAY: NONE;
+    }
+
+  
+    .desenvolvedores div .dev-banner img {
+        width: 200px;
+        padding: 0px;
+    }
+
+    footer{
+        height: 1000px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+   
+    footer div {
+        display: block;
+    }
+
+    footer > div > div{
+        height: 270px;
+        width: 270px;
+        margin: 10px auto;
+    }
+
+    footer div div h2 {
+        font-size: 15px;
+        margin-top: -10px;
+    }
+
+    footer div div h3 {
+        margin-top: -15px;
+        margin-bottom: 0px;
+    }
+
+    footer div div ul {
+        margin-top: 0 -35px;
+    }
+
+    footer div div ul li {
+        margin-bottom: 20px;
+    }
+
+    footer div div:nth-child(3) a {
+        margin-left: 80px;
+        margin-bottom: 15px;
+    }
+
+    footer div div:nth-child(2) iframe {
+        margin-bottom: 30px;
+        margin-left: 5px;
+    }
+
+    footer .desenvolvido{
+        margin-top: 30px;
+    }
+
+
+}
+/*fim @media 0 até ---------360px*/
+
+
+
+/*==========inicio PAGINA CONTATO==============*/
+.contato iframe{
+    height: 400px;
+}
+
+
+main section:nth-child(2){
+    padding: 40px;
+}
+
+.pag-contato{
+    height: 450px;
+    background: black;
+    display: block;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.pag-contato h2{
+    padding: 50px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+}
+
+.pag-contato > div{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pag-contato input{
+    margin-bottom: 10px;
+    height: 50px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.pag-contato textarea{
+    height: 180px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.pag-contato ::placeholder{
+    margin-left: 50px;    
+    font-size: 24px;
+}
+
+.pag-contato .button{
+    margin-left: 200px;
+    margin-top: 10px;
+    width: 200px;
+    background: #F2B705;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 15px;
+    color: black;
+}
+
+.pag-contato .button:hover{
+    color: black;
+    background: white;
+}
+
+/*==========fim PAGINA CONTATO==============*/
+
+
+/*=============inicio 900px PAGINA CONTATO=====================*/
+@media (max-width:900px) {
+
+    .pag-contato > div{
+        padding: 5px;
+    } 
+   
+  
+    .pag-contato div >div div{
+        width: 50%;
+    }
+
+    .pag-contato div >div:nth-child(1){
+        width: 100%;
+    }
+    
+    .pag-contato div >div:nth-child(2){
+        width: 100%;
+    }
+
+    .pag-contato div >div:nth-child(3){
+        width: 100%;
+    }
+
+    .pag-contato .button{
+        margin-left: 150px;
+    }
+
+    .pag-contato input{
+        width: 100%;
+    }
+    
+    .pag-contato textarea{
+        width: 100%;
+    }
+
+    /* footer > div { */
+        /* width: 85%; */
+        /* gap: 5%; */
+    /* } */
+
+    footer div div:nth-child(1) {
+        width: 100%;
+    }
+
+    footer div nav {
+        width: 100%;
+    } 
+
+    footer div div:nth-child(2) {
+        width: 100%;
+    }
+
+
+}
+/*============fim 900px=========*/
+
+
+/*=============inicio 768px=====================*/
+@media (max-width:768px) {
+    footer div > div:nth-child(2) .iframe{
+        width: 50%;
+    }
+}
+/*============fim 768px=========*/
+
+
+/*=============inicio 360px=====================*/
+@media (max-width:360px) {
+
+    .pag-contato{
+        height: 600px;
+    }
+
+    .pag-contato > div{
+        display: block;
+    }  
+
+    .pag-contato input{
+        width: 80%;
+        margin-left: 30px;
+    }
+
+    .pag-contato textarea{
+        width: 80%;
+        margin-left: 30px;
+
+    }
+
+}
+/*============fim 360px=========*/
